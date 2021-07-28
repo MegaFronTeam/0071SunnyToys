@@ -3,10 +3,11 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= null
+	- let  bg= 'index-1912.png'
 
 block title
 	- let  title= 'title'
@@ -15,36 +16,6 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+soc()
-	//a(href="#modal-call").link-modal-js фывфывфыв
-	//+in-c("checkbox", "text")
-	////- +pic('f8af7db0d56028b5cc1c7dfc78ec06e8.jpg')
-	////- img(src="img/r.avif", alt="")
-	//img(src="img/@2x/r.jpg", alt="")
-	//
-	//img(src="img/@2x/webp/r.webp", alt="")
-	////- img(src="img/002-book.avif", alt="")
-	//img(src="img/@2x/002-book.png", alt="")
-	//img(src="img/@2x/webp/002-book.webp", alt="")
-	//
-	//+b.tabs--js
-	//	+e.caption.d-flex
-	//		+e.btn.btn.btn-success.active  btn  2 1
-	//		+e.btn.btn.btn-success btn 2  2
-	//		+e.btn.btn.btn-success btn 2  3
-	//		+e.btn.btn.btn-success btn  2 4
-	//	+e.wrap
-	//		+e.content.active content 1
-	//		+e.content content 2
-	//		+e.content content 3
-	//		+e.content content 4
-	//	+e.wrap
-	//		+e.content.active content 1
-	//		+e.content content 2
-	//		+e.content content 3
-	//		+e.content content 4
-	+topLine()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sCategories()
 	+footer()

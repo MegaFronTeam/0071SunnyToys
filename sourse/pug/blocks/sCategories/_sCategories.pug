@@ -1,0 +1,32 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories--js.section#sCategories&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					+b.section-title
+						h2 Категории товаров
+				+e.arrow-col.col-lg-auto
+					+arrow()
+			+e.slider-wrap
+				.swiper-container.sCategories-slider-js
+					.swiper-wrapper
+						+sCategoriesSlide(1, `Машинки <br> металлические`)
+						+sCategoriesSlide(2, `Обучающие <br> игрушки`)
+						+sCategoriesSlide(3, `Игрушки <br> на батарейках`)
+						+sCategoriesSlide(4, `Игрушки <br> пластмассовые`)
+						+sCategoriesSlide(5, `Игрушки <br> на р/у, треки`)
+						+sCategoriesSlide(6, `Детские <br> конструкторы`)
+						+sCategoriesSlide(7, `Оружие <br> и солдатики`)
+						+sCategoriesSlide(8, `Наборы для девочек <br> и мальчиков`)
+						+sCategoriesSlide(9, `Коляски <br> для кукол`)
+						+sCategoriesSlide(10, `Набор <br> доктора`)
+						+sCategoriesSlide(11, `Детские <br> Кухни`)
+						+sCategoriesSlide(12, `Куклы`)
+	// end sCategories
+
+mixin sCategoriesSlide(imgNum, txt)
+	.swiper-slide
+		+e.item(href='#')
+			img(loading="lazy" src=`img/@2x/category-img-${imgNum}.jpg` alt='')
+			+e.txt!=txt

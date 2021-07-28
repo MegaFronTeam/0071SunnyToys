@@ -1,28 +1,76 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
+	+b.menu-mobile--js.d-base-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.logo
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
+			+tnCatalogBtn('d-lg-none py-0 mb-4')
 			+mnu()
-	//  мобильное меню
+			+topNavSearch('d-xl-none mb-4')
+			+topNavsocRow('d-lg-none mb-4')
+			+b.tn-tell.d-lg-none.mb-4(href="tel:88006595599") 8 800 659 55 99
+			+tnCity('d-md-none mb-4')
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
+		+e.container.container
+			+e.yellow-box
+				+e.row.row
+					.col.col-lg-auto.align-self-center
+						+e.logo(href="#")
+							img(loading="lazy" src="img/svg/logo.svg" alt="")
+					+e.city-col.col-auto.align-self-center.d-md-block.d-none
+						+tnCity()
+					.col.col-base-auto.align-self-center.d-none.d-lg-block
+						+tnCatalogBtn()
+					.col-auto.align-self-center.d-none.d-base-block
+						+mnu()
+					+e.search-col.col-auto.d-none.d-xl-block
+						+topNavSearch()
+					.col-auto.p-0
+						+e.cart(href="#")
+							+e.c-img
+								img(loading="lazy" src="img/svg/cart.svg" alt="")
+							+e.c-txt.d-none.d-base-inline Корзина
+							+e.c-val 10
+					.col-auto.p-0
+						+e.lc(href='#')
+							img(loading="lazy" src="img/svg/user.svg" alt="")
+					.col-auto.ms-auto.align-self-center.d-none.d-lg-block
+						+b.tn-tell(href="tel:88006595599") 8 800 659 55 99
+					.col-auto.align-self-center.d-none.d-lg-block
+						+topNavsocRow()
+					.col-auto.d-base-none.align-self-center
+						+b.toggle-menu-mobile--js
+							span
+				//-.col.d-none.d-lg-block
 					+mnu()
-					
 	// end top-nav
+
+mixin topNavSocItem(iconName)
+	.col-auto
+		+e.soc-item(href='#')
+			img(loading="lazy" src=`img/svg/soc-${iconName}.svg` alt="")
+
+mixin topNavSearch(addClasses='')
+	+b.search(class=addClasses)
+		+e.zoom-btn(type="button")
+			+icon('zoom')
+		+input('Поиск по сайту', 'text')
+
+mixin topNavsocRow(addClasses='')
+	+b.soc-row.row(class=addClasses)
+		+topNavSocItem('wa')
+		+topNavSocItem('tg')
+		+topNavSocItem('vb')
+
+mixin tnCity(addClasses='')
+	+b.city-choise(href='#' class=addClasses) Москва
+
+mixin tnCatalogBtn(addClasses='')
+	+b.catalog-btn(class=addClasses)
+		+e.icon
+			img(loading="lazy" src="img/svg/catalog-burger.svg" alt="")
+		span Каталог

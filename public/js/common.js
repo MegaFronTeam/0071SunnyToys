@@ -119,7 +119,7 @@ const JSCCommon = {
 			passive: true
 		});
 		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+			if (window.matchMedia("(min-width: 1880px)").matches) this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -279,8 +279,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
-	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.heightwindow(); // JSCCommon.animateScroll();
+	// JSCCommon.CustomInputFile();
 
 	var x = window.location.host;
 	let screenName;
@@ -340,6 +340,55 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyoneJs
+
+	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //
+
+	let sCategoriesNext = document.querySelector('.sCategories--js .swiper-button-next');
+	let sCategoriesPrev = document.querySelector('.sCategories--js .swiper-button-prev');
+	let sCategoriesSlider = new Swiper('.sCategories-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 24,
+		slidesPerColumnFill: 'row',
+		breakpoints: {
+			1: {
+				slidesPerView: "auto",
+				slidesPerColumn: 1
+			},
+			575: {
+				slidesPerColumn: 2,
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerColumn: 2
+			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerColumn: 2
+			},
+			1880: {
+				slidesPerView: 6,
+				slidesPerColumn: 2
+			}
+		},
+		navigation: {
+			nextEl: sCategoriesPrev,
+			prevEl: sCategoriesNext
+		}
+	}); //end luckyoneJs
 }
 
 ;

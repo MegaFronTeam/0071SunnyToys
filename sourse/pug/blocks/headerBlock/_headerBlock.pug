@@ -2,9 +2,45 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
+			+e.row.row
+				+e.slider-col.col-xl-8.col-base-9
+					+e.slider-wrap
+						.swiper-container.headerBlock-slider-js
+							.swiper-wrapper
+								+headerBlockSlide()
+								-for(var i = 1; i < 7;i++)
+									+headerBlockSlide(i)
+							.d-none.d-md-block
+								+arrow()
+							.swiper-pagination
+				.col
+					+e.baners-row.row
+						+headerBlockBaner(2, 'Игрушки в ванную комнату', 'Новинки в каталоге', '#FFBD12', '#000000')
+						+headerBlockBaner(3, 'Сыграем в доктора сегодня', 'игрушки на медицинскую тематику')
+				//slide-img-
 						
 	// end headerBlock
+
+mixin headerBlockSlide(mod='')
+	.swiper-slide
+		+e.item
+			+e.bg
+				img(loading="lazy" src="img/@2x/slide-img-1.jpg" alt="")
+			+e.content
+				+e.title Наборы развивающих игрушек
+				+e.descr
+					| Специальные предложения
+					br
+					| и скидки в категории
+				+e.btn(href='#') Подробнее...
+
+mixin headerBlockBaner(imgNum, title, descr, titleCol='white', descrCol='descrCol')
+	.col-md-6.col-xl-12
+		+e.baner
+			+e.baner-bg
+				img(loading="lazy" src=`img/@2x/slide-img-${imgNum}.jpg` alt="")
+			+e.b-content
+				+e.b-title(style=`color: ${titleCol}`)=title
+				+e.b-descr(style=`color: ${descrCol}`)=descr
+				+e.b-btn(href="#")
+					+icon('arrow-right')

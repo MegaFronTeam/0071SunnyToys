@@ -5,7 +5,7 @@ $h: em(2);
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: $white;
 	font-size: 32px;
 	width: 1em;
 	cursor: pointer;
@@ -95,14 +95,14 @@ $h: em(2);
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		padding: rem(20);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
 		@include mt(.3s);
 		transition-delay: .4s;
-		opacity: var(--opacity);
+		background-color: $primary;
 	}
 
 	&.active { 
@@ -139,21 +139,55 @@ $h: em(2);
 		}
 	}
 
-	ul {
-		position: relative;
-	}
-
-	li {
+	//
+	&__logo{
 		display: block;
-		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, .13);
+		margin-bottom: rem(30);
 
-		a {
-			// font-size: 16px;
-
-			padding: 10px;
-			display: block;
-
+		img{
+			width: auto;
+			max-width: 100%;
 		}
 	}
+
+	//
+	.menu{
+		margin: 0 0 rem(30);
+		list-style: none;
+
+		.menu-item{
+			margin-bottom: rem(15);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		a{
+			font-family: $mono;
+			display: block;
+
+			font-weight: bold;
+			font-size: rem(16);
+			line-height: (18/14);
+
+			color: $black;
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+	.search{
+		background-color: $white;
+		border-radius: rem(8);
+		&__zoom-btn{
+			.icon{
+				color: $black;
+			}
+		}
+
+	}
+
+	&__{}
+	&__{}
+	&__{}
 }

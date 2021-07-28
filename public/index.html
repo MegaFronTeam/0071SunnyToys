@@ -6,154 +6,327 @@
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body data-bg="index-1912.png">
 		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-lg-none">
+			<div class="menu-mobile menu-mobile--js d-base-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-							<ul class="sub-menu">
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
-						</li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+					<div class="menu-mobile__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</div>
+					<div class="catalog-btn d-lg-none py-0 mb-4">
+						<div class="catalog-btn__icon"><img loading="lazy" src="img/svg/catalog-burger.svg" alt=""/>
+						</div><span>Каталог</span>
+					</div>
+					<ul class="menu">
+						<li class="menu-item"><a href="#">Прайс-лист</a></li>
+						<li class="menu-item"><a href="#">Категории</a></li>
+						<li class="menu-item"><a href="#">Акции и скидки</a></li>
+						<li class="menu-item"><a href="#">Контакты</a></li>
 					</ul>
+					<div class="search d-xl-none mb-4">
+						<button class="search__zoom-btn" type="button">
+							<svg class="icon icon-zoom ">
+								<use xlink:href="img/svg/sprite.svg#zoom"></use>
+							</svg>
+						</button>
+						<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+					<div class="soc-row row d-lg-none mb-4">
+						<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-wa.svg" alt=""/></a>
+						</div>
+						<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-tg.svg" alt=""/></a>
+						</div>
+						<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-vb.svg" alt=""/></a>
+						</div>
+					</div><a class="tn-tell d-lg-none mb-4" href="tel:88006595599">8 800 659 55 99</a><a class="city-choise d-md-none mb-4" href="#">Москва</a>
 				</div>
 			</div>
-			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__yellow-box">
+							<div class="top-nav__row row">
+								<div class="col col-lg-auto align-self-center"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+								</div>
+								<div class="top-nav__city-col col-auto align-self-center d-md-block d-none"><a class="city-choise" href="#">Москва</a>
+								</div>
+								<div class="col col-base-auto align-self-center d-none d-lg-block">
+									<div class="catalog-btn">
+										<div class="catalog-btn__icon"><img loading="lazy" src="img/svg/catalog-burger.svg" alt=""/>
+										</div><span>Каталог</span>
+									</div>
+								</div>
+								<div class="col-auto align-self-center d-none d-base-block">
+									<ul class="menu">
+										<li class="menu-item"><a href="#">Прайс-лист</a></li>
+										<li class="menu-item"><a href="#">Категории</a></li>
+										<li class="menu-item"><a href="#">Акции и скидки</a></li>
+										<li class="menu-item"><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+								<div class="top-nav__search-col col-auto d-none d-xl-block">
+									<div class="search">
+										<button class="search__zoom-btn" type="button">
+											<svg class="icon icon-zoom ">
+												<use xlink:href="img/svg/sprite.svg#zoom"></use>
+											</svg>
+										</button>
+										<div class="search__input-wrap form-group"><input class="search__input form-control" name="text" type="text" placeholder="Поиск по сайту"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="col-auto p-0"><a class="top-nav__cart" href="#"><span class="top-nav__c-img"><img loading="lazy" src="img/svg/cart.svg" alt=""/></span><span class="top-nav__c-txt d-none d-base-inline">Корзина</span><span class="top-nav__c-val">10</span></a>
+								</div>
+								<div class="col-auto p-0"><a class="top-nav__lc" href="#"><img loading="lazy" src="img/svg/user.svg" alt=""/></a>
+								</div>
+								<div class="col-auto ms-auto align-self-center d-none d-lg-block"><a class="tn-tell" href="tel:88006595599">8 800 659 55 99</a>
+								</div>
+								<div class="col-auto align-self-center d-none d-lg-block">
+									<div class="soc-row row">
+										<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-wa.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-tg.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="soc-row__soc-item" href="#"><img loading="lazy" src="img/svg/soc-vb.svg" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-base-none align-self-center">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col d-none d-lg-block">
-							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a>
-									<ul class="sub-menu">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-									</ul>
-								</li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-							</ul>
-						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<div class="soc"><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-fb ">
-					<use xlink:href="img/svg/sprite.svg#fb"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-instagram ">
-					<use xlink:href="img/svg/sprite.svg#instagram"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-telegram ">
-					<use xlink:href="img/svg/sprite.svg#telegram"></use>
-				</svg></a>
-			</div><a class="link-modal-js" href="#modal-call">фывфывфыв</a>
-			<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">text</span>
-			</label><img src="img/@2x/r.jpg" alt=""><img src="img/@2x/webp/r.webp" alt=""><img src="img/@2x/002-book.png" alt=""><img src="img/@2x/webp/002-book.webp" alt="">
-			<div class="tabs tabs--js">
-				<div class="tabs__caption d-flex">
-					<div class="tabs__btn btn btn-success active"> btn  2 1
-					</div>
-					<div class="tabs__btn btn btn-success">btn 2  2
-					</div>
-					<div class="tabs__btn btn btn-success">btn 2  3
-					</div>
-					<div class="tabs__btn btn btn-success">btn  2 4
-					</div>
-				</div>
-				<div class="tabs__wrap">
-					<div class="tabs__content active">content 1
-					</div>
-					<div class="tabs__content">content 2
-					</div>
-					<div class="tabs__content">content 3
-					</div>
-					<div class="tabs__content">content 4
-					</div>
-				</div>
-				<div class="tabs__wrap">
-					<div class="tabs__content active">content 1
-					</div>
-					<div class="tabs__content">content 2
-					</div>
-					<div class="tabs__content">content 3
-					</div>
-					<div class="tabs__content">content 4
-					</div>
-				</div>
-			</div>
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<div class="headerBlock__row row">
+						<div class="headerBlock__slider-col col-xl-8 col-base-9">
+							<div class="headerBlock__slider-wrap">
+								<div class="swiper-container headerBlock-slider-js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="headerBlock__item">
+												<div class="headerBlock__bg"><img loading="lazy" src="img/@2x/slide-img-1.jpg" alt=""/>
+												</div>
+												<div class="headerBlock__content">
+													<div class="headerBlock__title">Наборы развивающих игрушек
+													</div>
+													<div class="headerBlock__descr">Специальные предложения<br/>и скидки в категории
+													</div><a class="headerBlock__btn" href="#">Подробнее...</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="d-none d-md-block">
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="headerBlock__baners-row row">
+								<div class="col-md-6 col-xl-12">
+									<div class="headerBlock__baner">
+										<div class="headerBlock__baner-bg"><img loading="lazy" src="img/@2x/slide-img-2.jpg" alt=""/>
+										</div>
+										<div class="headerBlock__b-content">
+											<div class="headerBlock__b-title" style="color: #FFBD12">Игрушки в ванную комнату
+											</div>
+											<div class="headerBlock__b-descr" style="color: #000000">Новинки в каталоге
+											</div><a class="headerBlock__b-btn" href="#">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-xl-12">
+									<div class="headerBlock__baner">
+										<div class="headerBlock__baner-bg"><img loading="lazy" src="img/@2x/slide-img-3.jpg" alt=""/>
+										</div>
+										<div class="headerBlock__b-content">
+											<div class="headerBlock__b-title" style="color: white">Сыграем в доктора сегодня
+											</div>
+											<div class="headerBlock__b-descr" style="color: descrCol">игрушки на медицинскую тематику
+											</div><a class="headerBlock__b-btn" href="#">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--slide-img--->
 					</div>
-					<div class="row"></div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sCategories-->
+			<section class="sCategories sCategories--js section" id="sCategories">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="sCategories__row row">
+						<div class="col-lg">
+							<div class="section-title">
+								<h2>Категории товаров</h2>
+							</div>
+						</div>
+						<div class="sCategories__arrow-col col-lg-auto">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="sCategories__slider-wrap">
+						<div class="swiper-container sCategories-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-1.jpg" alt=""/><span class="sCategories__txt">Машинки <br> металлические</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-2.jpg" alt=""/><span class="sCategories__txt">Обучающие <br> игрушки</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-3.jpg" alt=""/><span class="sCategories__txt">Игрушки <br> на батарейках</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-4.jpg" alt=""/><span class="sCategories__txt">Игрушки <br> пластмассовые</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-5.jpg" alt=""/><span class="sCategories__txt">Игрушки <br> на р/у, треки</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-6.jpg" alt=""/><span class="sCategories__txt">Детские <br> конструкторы</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-7.jpg" alt=""/><span class="sCategories__txt">Оружие <br> и солдатики</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-8.jpg" alt=""/><span class="sCategories__txt">Наборы для девочек <br> и мальчиков</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-9.jpg" alt=""/><span class="sCategories__txt">Коляски <br> для кукол</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-10.jpg" alt=""/><span class="sCategories__txt">Набор <br> доктора</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-11.jpg" alt=""/><span class="sCategories__txt">Детские <br> Кухни</span></a>
+								</div>
+								<div class="swiper-slide"><a class="sCategories__item" href="#"><img loading="lazy" src="img/@2x/category-img-12.jpg" alt=""/><span class="sCategories__txt">Куклы</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- end sForm-->
-			<!-- start sContact-->
-			<section class="sContact section" id="sContact">
+			<!-- end sCategories-->
+			<footer class="footer">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContact</h2>
+					<div class="row">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col-auto"></div>
 					</div>
-					<div class="row"></div>
 				</div>
-			</section>
-			<!-- end sContact-->
-			<footer class="footer"></footer>
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
@@ -183,7 +356,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/libs.js"></script>

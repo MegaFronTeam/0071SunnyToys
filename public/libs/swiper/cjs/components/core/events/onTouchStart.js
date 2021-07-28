@@ -36,7 +36,7 @@ function onTouchStart(event) {
   data.isTouchEvent = e.type === 'touchstart';
   if (!data.isTouchEvent && 'which' in e && e.which === 3) return;
   if (!data.isTouchEvent && 'button' in e && e.button > 0) return;
-  if (data.isTouched && data.isMoved) return; // change target el for shadow root componenet
+  if (data.isTouched && data.isMoved) return; // change target el for shadow root component
 
   var swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
 
