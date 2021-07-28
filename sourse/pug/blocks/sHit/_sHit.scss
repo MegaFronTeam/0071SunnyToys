@@ -1,0 +1,83 @@
+// start .sHit
+.sHit {
+	&__row{
+
+	}
+	.section-title {
+
+	}
+	&__new{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: 1;
+		color: $yellow;
+
+		padding: rem(5) 0;
+		position: relative;
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: rem(5);
+			bottom: 0;
+			width: calc(100% - 10px);
+			height: 2px;
+			background-color: $gray-950;
+		}
+	}
+	&__slider-wrap{
+
+		.swiper-container{
+			@include media-breakpoint-down(md){
+				overflow: visible;
+			}
+		}
+		.swiper-wrapper{}
+		.swiper-slide{
+			width: rem(300);
+			max-width: 100%;
+
+			@include media-breakpoint-up(sm){
+				width: calc(100%/2 - 24px*1/2);
+			}
+			@include media-breakpoint-up(md){
+				width: calc(100%/3 - 24px*2/3);
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100%/4 - 24px*3/4);
+			}
+			@include media-breakpoint-up(base){
+				width: calc(100%/6 - 24px*5/6);
+			}
+		}
+	}
+	&__{}
+	&__{}
+} // end.sHit
+
+.catalog-item{
+	&__img{
+
+		img {
+
+		}
+	}
+	&__top-row{}
+	&__yellow{}
+	&__gray{
+		span{
+
+		}
+		b{}
+	}
+	&__title{}
+	&__chars{}
+	&__char-row{}
+	&__key-col{}
+	&__val-col{}
+	&__foot-row{}
+	&__price{}
+	&__{}
+	&__{}
+}

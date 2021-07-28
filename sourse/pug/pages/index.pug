@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sHit/_sHit.pug
 
 block variables
 	- let  mainPage= null 
@@ -18,4 +19,8 @@ block pagecontent
 		+top-nav()
 	+headerBlock()
 	+sCategories()
+	+sHit({
+		title: 'Хиты продаж',
+		new: true,
+	})
 	+footer()

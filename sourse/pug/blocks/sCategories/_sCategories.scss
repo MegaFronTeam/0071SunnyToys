@@ -16,14 +16,6 @@
 			font-weight: bold;
 		}
 	}
-	&__arrow-col{
-		display: flex;
-		align-items: center;
-
-		& > *:first-child{
-			margin-right: rem(16);
-		}
-	}
 	&__slider-wrap{
 
 		.swiper-container{
@@ -69,3 +61,12 @@
 	&__{}
 	&__{}
 } // end.sCategories
+
+.arrow-col{
+	display: flex;
+	align-items: center;
+
+	& > *:first-child{
+		margin-right: rem(16);
+	}
+}
