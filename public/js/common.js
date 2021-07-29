@@ -367,6 +367,28 @@ function eventHandler() {
 
 	$('.set-curr-year-js').each(function () {
 		this.innerHTML = new Date().getFullYear();
+	}); //
+
+	let topNav = document.querySelector(".top-nav");
+
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-h', "".concat(topNav.offsetHeight, "px"));
+	}
+
+	window.addEventListener('resize', calcHeaderHeight, {
+		passive: true
+	});
+	window.addEventListener('scroll', calcHeaderHeight, {
+		passive: true
+	});
+	calcHeaderHeight(); //
+
+	$('.f-dd-btn-js').click(function () {
+		$(this).toggleClass('active');
+		$(this).closest('.f-dd-items-js').toggleClass('active');
+		$(this).closest('.f-dd-item-js').find('.f-dd-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
 	}); //end luckyoneJs
 }
 

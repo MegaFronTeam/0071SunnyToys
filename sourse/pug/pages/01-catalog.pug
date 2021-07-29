@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCerts/_sCerts.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '01-1912.png'
+
+block title
+	- let  title= 'catalog'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Каталог товаров', 'Машинки металические')
+			+e.row.row
+				.col-auto
+					+e.back-arrow(href="#")
+						img(loading="lazy" src='img/svg/short-arrow-left.svg' alt='')
+				.col
+					h1 Машинки металлические
+	+sCatalog()
+	+sHit({
+		title: 'Вы смотрели',
+	})
+	+footer()

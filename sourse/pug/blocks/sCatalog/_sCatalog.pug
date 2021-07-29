@@ -1,0 +1,125 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+e.row.row
+				+e.filter-col.col-lg-4.col-xl-3.col-base-2
+					+sCatalogFilter()
+				.col-lg
+					+e.baner
+						+e.b-row.row.align-items-center
+							.col
+								h2 Банер внутри категорий&#160;для&#160;прождвижения товара категории
+							.col-auto
+								+e.b-img
+									img(loading="lazy" src="img/@2x/baner-img.png" alt="")
+					+e.top-row.row
+						.col-auto
+							+e.goods
+								span Всего товаров:
+								span.text-primary.ms-1 5369
+						//.col-auto
+					+e.blue-strip
+						+e.bs-row.row
+							+e.sort-col.col-xxl-auto
+								+e.sub-row.row.align-items-center
+									+e.gray.col-auto Сортировка:
+									.col-auto
+										img(loading="lazy" src="img/svg/sort-stab.svg" alt="")
+							.col-md
+								+sCatalogShowFor()
+							.col-md-auto.d-none.d-md-block
+								+pugin()
+					+e.cards-row.row
+						-for(var i = 0; i < 20; i++)
+							+e.card-col.col-sm-6.col-md-4.col-xl-4
+								+catalogItem()
+					+e.foot-row.row
+						+e.f-show-for-col.col
+							+sCatalogShowFor()
+						+e.f-pugin-col.col-auto
+							+pugin()
+					+e.seo
+						h2 Сео текст категории
+						p Принципы нашей работы строятся на предоставлении клиентам максимально выгодных условий сотрудничества и качественного обслуживания. Компания Саннитойс предлагает Вам более 3000 наименований товаров, произведенных в Тайване, Гонконге, России, Польше и Китае. Наша активная маркетинговая и инновационная политика позволяет довести до российского потребителя все новинки, появляющиеся на мировом рынке игрушек и товаров для детей
+	// end sCatalog
+
+mixin sCatalogShowFor()
+	+b.show-for
+		+e.row.row.align-items-center
+			+e.gray.col-auto Показывать по:
+			.col-auto
+				+e.sub-row.row
+					+sCatalogShowForItem(20)(checked)
+					+sCatalogShowForItem(50)
+					+sCatalogShowForItem(100)
+
+mixin sCatalogShowForItem(txt)
+	.col-auto
+		+e.LABEL.radio
+			input(type="radio" name="show-for" value=txt class='invisible')&attributes(attributes)
+			span.txt=txt
+
+mixin sCatalogFilter()
+	+b.c-filter
+		+e.header
+			+e.h-row.row.align-items-end
+				+e.h-txt.col-auto Категории
+				+e.h-chosen.col Выбрано: 10
+				.col-auto
+					+e.h-discard(href="#") Сбросить
+		+e.body
+			+sCatalogFilterItem('Машинки металлические', undefined, 'active')(checked)
+			+sCatalogFilterItem('Обучающие игрушки', '5')
+			+sCatalogFilterItem('Игрушки на батарейках', '4')
+			+sCatalogFilterItem('Игрушки пластмассовые', '')
+			+sCatalogFilterItem('Игрушки на р/у, треки', '')
+			+sCatalogFilterItem('Детские конструкторы', '')
+			+sCatalogFilterItem('Оружие и солдатики', '')
+			+sCatalogFilterItem(`Наборы для девочек <br> и мальчиков`, '')
+			+sCatalogFilterItem('Коляски для кукол', '')
+			+sCatalogFilterItem('Набор доктора', '')
+			+sCatalogFilterItem('Детские Кухни', '')
+			+sCatalogFilterItem('Куклы', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Куклы', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Куклы', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Куклы', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Куклы', '')
+			+sCatalogFilterItem('Подвеска на кроватку', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+			+sCatalogFilterItem('Герои мультфильмов', '')
+
+mixin sCatalogFilterItem(txt, amount, activeClasses='')
+	+e.dd-item.f-dd-item-js(class=activeClasses)
+		+e.i-row.row.align-items-center
+			.col
+				+customChb(txt, 'bold', amount)&attributes(attributes)
+					span.txt=txt
+			.col-auto
+				+e.dd-btn.f-dd-btn-js(class=activeClasses)
+		+e.dd-content.f-dd-content-js(class=activeClasses)
+			+customChb('Машинки Кинсмарт')
+			+customChb('Машинки Маисто')
+			+customChb('Машинки Play Smart')
+			+customChb('Машинки Пионер')
+			+customChb('Машинки разные')(checked)
+
+mixin customChb(txt, addClases, amount)
+	+b.LABEL.custom-chb(class=addClases)
+		input(type="checkbox" class='invisible' name=txt)&attributes(attributes)
+		span.square
+		if amount
+			span.txt
+				span=txt
+				sapn.ms-1.text-primary=amount
+		else
+			span.txt!=txt
