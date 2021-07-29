@@ -9,10 +9,21 @@ mixin sCatalog(data)
 					+e.baner
 						+e.b-row.row.align-items-center
 							.col
-								h2 Банер внутри категорий&#160;для&#160;прождвижения товара категории
+								h2
+									| Банер внутри
+									|
+									br.d-none.d-sm-block
+									| категорий для прождвижения
+									| 
+									br.d-none.d-sm-block
+									| товара категории
 							.col-auto
 								+e.b-img
 									img(loading="lazy" src="img/@2x/baner-img.png" alt="")
+					+e.filter-btn.filter-btn-js.d-xl-none.mb-3
+						span Фильтр
+						+e.mf-icon
+							img(loading="lazy" src="img/svg/catalog-burger.svg" alt="")
 					+e.top-row.row
 						.col-auto
 							+e.goods
@@ -61,7 +72,11 @@ mixin sCatalogShowForItem(txt)
 			span.txt=txt
 
 mixin sCatalogFilter()
-	+b.c-filter
+	+b.c-filter--js
+		.text-end.d-xl-none.mb-3
+			+e.close-btn.filter-btn-js
+				//span Закрыть
+				+icon('cross')
 		+e.header
 			+e.h-row.row.align-items-end
 				+e.h-txt.col-auto Категории

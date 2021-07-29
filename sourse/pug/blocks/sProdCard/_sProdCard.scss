@@ -1,0 +1,141 @@
+// start .sProdCard
+.sProdCard {
+	--sPT: #{rem(30)};
+
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(68)};
+	}
+	--sTPB: #{rem(30)};
+
+	&__row{
+		--bs-gutter-y: #{rem(32)};
+
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(32)};
+		}
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(24)};
+		}
+	}
+	&__img{
+		@include media-breakpoint-up(base){
+			width: 85.5%;
+		}
+		min-height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			max-width: 100%;
+			width: auto;
+		}
+	}
+	&__chars{
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(35);
+		}
+		@include media-breakpoint-up(base){
+			padding-bottom: rem(70);
+		}
+	}
+	&__char-row{
+		--bs-gutter-y: #{rem(4)};
+
+		padding-bottom: rem(15);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(8);
+		}
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(12);
+		}
+		@include media-breakpoint-up(base){
+			padding-bottom: rem(16);
+		}
+
+		&:last-child{
+			padding-bottom: 0;
+		}
+
+	}
+	&__key-col{
+		line-height: (19/14);
+
+		font-weight: 600;
+		@include media-breakpoint-up(sm){
+			font-weight: 400;
+			font-size: rem(14);
+		}
+
+		color: rgba($black, .5);
+		min-width: calc(var(--bs-gutter-x) + 146px);
+	}
+	&__val-col{
+		font-size: rem(14);
+		@include media-breakpoint-up(sm){
+			font-size: rem(16);
+		}
+		line-height: (21/16);
+		color: $black;
+	}
+
+	.price-row{
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(8)};
+
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(35);
+		}
+		@include media-breakpoint-up(base){
+			padding-bottom: rem(62);
+		}
+		align-items: flex-start!important;
+		max-width: 546px;
+
+		&__price{
+			line-height: (30/24);
+
+			font-size: rem(20);
+			@include media-breakpoint-up(sm){
+				font-size: rem(24);
+			}
+		}
+		&__light-btn{
+			width: rem(40);
+			height: rem(40);
+			@include media-breakpoint-up(sm){
+				width: rem(48);
+				height: rem(48);
+			}
+			border-radius: rem(12);
+
+		}
+		//
+		&__amount{
+			min-width: rem(32);
+		}
+		&__{}
+	}
+	&__descr{
+		@include media-breakpoint-up(base){
+			margin-right: -10px;
+		}
+
+		font-size: rem(18);
+		@include media-breakpoint-up(xl){
+			font-size: rem(20);
+		}
+		line-height: (31/20);
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sProdCard

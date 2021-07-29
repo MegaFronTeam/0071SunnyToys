@@ -21,7 +21,7 @@ mixin sHit(data)
 			if data.footer
 				+e.footer-row.row
 					.col-auto
-						+e.f-btn(href='#') Смотреть все хиты продаж
+						+e.f-btn(href='#')=`${data.fBtnTxt || 'Смотреть все хиты продаж'}`
 
 	// end sHit
 
@@ -47,16 +47,27 @@ mixin catalogItem()
 			+catalogItemChar('Блок', '84 шт.')
 			+catalogItemChar('В наличии', 'Более коробки')
 			+catalogItemChar('Тема', 'Гарри Поттер', '#FFBD12')
-		+e.foot-row.row.align-items-center
-			.col
-				+e.price 535 ₽
-			.col-auto
-				+e.light-btn(type='button') -
-			.col-auto
-				+e.amount 1
-			.col-auto
-				+e.light-btn(type='button') +
-			.col-auto
+		+priceRow()
+
+mixin priceRow(oldPrice, bigBtn)
+	+b.price-row.row.align-items-center
+		.col
+			if oldPrice
+				+e.old-price 12 535
+			+e.price 535 ₽
+		.col-auto
+			+e.light-btn(type='button') -
+		.col-auto.align-self-center
+			+e.amount.text-center 1
+		.col-auto
+			+e.light-btn(type='button') +
+		.col-auto
+			if bigBtn
+				+e.cart-btn-big(href="#")
+					+e.c-icon
+						img(loading="lazy" src='img/svg/cart-big.svg' alt="")
+					span.d-none.d-sm-inline В корзину
+			else
 				+e.cart-btn(href="#")
 					img(loading="lazy" src='img/svg/cart-white.svg' alt="")
 

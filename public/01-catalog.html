@@ -137,7 +137,15 @@
 				<div class="container">
 					<div class="sCatalog__row row">
 						<div class="sCatalog__filter-col col-lg-4 col-xl-3 col-base-2">
-							<div class="c-filter">
+							<div class="c-filter c-filter--js">
+								<div class="text-end d-xl-none mb-3">
+									<div class="c-filter__close-btn filter-btn-js">
+										<!--span Закрыть-->
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg>
+									</div>
+								</div>
 								<div class="c-filter__header">
 									<div class="c-filter__h-row row align-items-end">
 										<div class="c-filter__h-txt col-auto">Категории
@@ -998,12 +1006,20 @@
 							<div class="sCatalog__baner">
 								<div class="sCatalog__b-row row align-items-center">
 									<div class="col">
-										<h2>Банер внутри категорий&#160;для&#160;прождвижения товара категории</h2>
+										<h2>
+											Банер внутри
+											<br class="d-none d-sm-block"/>категорий для прождвижения
+											 <br class="d-none d-sm-block"/>товара категории
+										</h2>
 									</div>
 									<div class="col-auto">
 										<div class="sCatalog__b-img"><img loading="lazy" src="img/@2x/baner-img.png" alt=""/>
 										</div>
 									</div>
+								</div>
+							</div>
+							<div class="sCatalog__filter-btn filter-btn-js d-xl-none mb-3"><span>Фильтр</span>
+								<div class="sCatalog__mf-icon"><img loading="lazy" src="img/svg/catalog-burger.svg" alt=""/>
 								</div>
 							</div>
 							<div class="sCatalog__top-row row">
@@ -1112,24 +1128,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1174,24 +1190,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1236,24 +1252,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1298,24 +1314,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1360,24 +1376,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1422,24 +1438,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1484,24 +1500,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1546,24 +1562,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1608,24 +1624,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1670,24 +1686,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1732,24 +1748,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1794,24 +1810,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1856,24 +1872,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1918,24 +1934,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -1980,24 +1996,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2042,24 +2058,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2104,24 +2120,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2166,24 +2182,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2228,24 +2244,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2290,24 +2306,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2438,24 +2454,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2500,24 +2516,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2562,24 +2578,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2624,24 +2640,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2686,24 +2702,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2748,24 +2764,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2810,24 +2826,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2872,24 +2888,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2934,24 +2950,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -2996,24 +3012,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="catalog-item__foot-row row align-items-center">
+										<div class="price-row row align-items-center">
 											<div class="col">
-												<div class="catalog-item__price">535 ₽
+												<div class="price-row__price">535 ₽
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">-
+												<button class="price-row__light-btn" type="button">-
 												</button>
 											</div>
-											<div class="col-auto">
-												<div class="catalog-item__amount">1
+											<div class="col-auto align-self-center">
+												<div class="price-row__amount text-center">1
 												</div>
 											</div>
 											<div class="col-auto">
-												<button class="catalog-item__light-btn" type="button">+
+												<button class="price-row__light-btn" type="button">+
 												</button>
 											</div>
-											<div class="col-auto"><a class="catalog-item__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
+											<div class="col-auto"><a class="price-row__cart-btn" href="#"><img loading="lazy" src="img/svg/cart-white.svg" alt=""/></a>
 											</div>
 										</div>
 									</div>
@@ -3037,7 +3053,7 @@
 								<div class="footer__attention">Обращаем Ваше внимание, что данный сайт носит информационный характер и не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Для получения детальной информации о стоимости и наличию продукции, обращайтесь к менеджерам. Незаконное копирование запрещено.
 								</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
 							</div>
-							<div class="col-lg-9 col-xl-7 col-base-4 d-none d-sm-block">
+							<div class="col-lg-9 col-xl-7 col-base-4 offset-base-1 d-none d-sm-block">
 								<div class="footer__title footer__title--catalog">Каталог
 								</div>
 								<div class="footer__catalog"><a href="#">Обучающие игрушки</a><a href="#">Игрушки на батарейках</a><a href="#">Игрушки пластмассовые</a><a href="#">Игрушки на р/у, треки</a><a href="#">Детские конструкторы</a><a href="#">Оружие и солдатики</a><a href="#">Наборы</a><a href="#">Коляски для кукол</a><a href="#">Набор доктора</a><a href="#">Куклы</a><a href="#">Подвеска на кроватку</a><a href="#">Детские Кухни</a><a href="#">Игрушки на р/у, треки</a><a href="#">Детские конструкторы</a><a href="#">Оружие и солдатики</a><a href="#">Наборы</a><a href="#">Коляски для кукол</a><a href="#">Набор доктора</a>

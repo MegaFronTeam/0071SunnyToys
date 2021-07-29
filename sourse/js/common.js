@@ -390,6 +390,15 @@ function eventHandler() {
       $(this).toggleClass('active');
     })
   })
+  //
+  $('.filter-btn-js').click(function (){
+    $('body').toggleClass('fixed2');
+
+    $('.c-filter--js').fadeToggle(function (){
+      $(this).toggleClass('active');
+    })
+  })
+
 
   //end luckyoneJs
 
@@ -399,11 +408,3 @@ if (document.readyState !== 'loading') {
 } else {
   document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }

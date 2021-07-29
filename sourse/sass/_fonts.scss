@@ -1,6 +1,7 @@
 $default-font: "Fira Sans";
 $mono: 'a_futuraround';
 $mono2: 'Noto Sans';
+$mono3: 'Futura Bk BT';
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff2;
@@ -9,6 +10,7 @@ $file-format: woff2;
 // If font from googlefont, next lines remove
 @include font-face ($mono, $addr + "AFuturaRoundBold/AFuturaRoundBold", 700, $file-formats: $file-format);
 @include font-face ($mono, $addr + "AFuturaRound/AFuturaRound", 400, $file-formats: $file-format);
+@include font-face ($mono3, $addr + "FuturaBkBT/FuturaBT-Book", 400, $file-formats: $file-format);
 
 // font-weight helper:
 // 100 Thin

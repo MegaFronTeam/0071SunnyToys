@@ -1,0 +1,34 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					+e.img
+						img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+				.col-lg-6.col-base-5
+					+e.chars
+						+sProdCardCharItem('Артикул')
+							| Г11340
+						+sProdCardCharItem('Категория')
+							span.text-primary Машинки пластмассовыеs
+						+sProdCardCharItem('Производитель')
+							span.text-primary BELA (БЕЛА)
+						+sProdCardCharItem('Коробка')
+							| 8 шт.
+						+sProdCardCharItem('Блок')
+							| 84 шт.
+						+sProdCardCharItem('В наличии')
+							| Более коробки
+						+sProdCardCharItem('Тема')
+							span.text-primary Гарри Поттер
+					+priceRow(true, true)
+					+e.descr
+						p Инерционная. Разбивается после столкновения с препятствиями. После этого, машинку можно без труда собрать в первоначальное состояние. В дисплейбоксе. Цена за 1 шт
+	// end sProdCard
+
+mixin sProdCardCharItem(key)
+	+e.char-row.row
+		+e.key-col.col-sm-auto=key
+		+e.val-col.col-sm
+			block
