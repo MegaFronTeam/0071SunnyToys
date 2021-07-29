@@ -1,15 +1,15 @@
 mixin sHit(data)
 	// start sHit
-	+b.SECTION.sHit--js.section#sHit&attributes(attributes)
+	+b.SECTION.sHit--js(class=`${data.addClasses || ''}`).section#sHit&attributes(attributes)
 		.container
 			+e.row.row
-				.col-lg-auto
+				.col-sm-auto
 					+b.section-title
 						h2=data.title
 				if data.new
-					.col-lg.align-self-end
+					.col-sm.align-self-center
 						+e.new(href="#") Новые поступления
-				.col-lg-auto
+				.col-lg-auto.ms-lg-auto
 					+b.arrow-col.col-lg-auto
 						+arrow()
 			+e.slider-wrap
@@ -18,13 +18,18 @@ mixin sHit(data)
 						-for(var i = 0; i < 10; i++)
 							.swiper-slide
 								+catalogItem()
+			if data.footer
+				+e.footer-row.row
+					.col-auto
+						+e.f-btn(href='#') Смотреть все хиты продаж
+
 	// end sHit
 
 mixin catalogItem()
 	+b.catalog-item
 		+e.img(href="#")
 			img(loading="lazy" src='img/@2x/catalog-item.png' alt="")
-		+e.top-row.row
+		+e.top-row.row.align-items-center
 			.col
 				+e.yellow BELA (БЕЛА)
 			.col-auto
@@ -33,26 +38,27 @@ mixin catalogItem()
 						| Арт:
 						|
 					b Г11340
-		+e.title Конструктор Гарри Поттер Экспекто Патронум 139дет
+		+e.title(href='#')
+			| Конструктор
+			br
+			| Гарри Поттер Экспекто Патронум 139дет
 		+e.chars
 			+catalogItemChar('Коробка', '84 шт.')
 			+catalogItemChar('Блок', '84 шт.')
 			+catalogItemChar('В наличии', 'Более коробки')
 			+catalogItemChar('Тема', 'Гарри Поттер', '#FFBD12')
-		+e.foot-row.row.align-self-center
+		+e.foot-row.row.align-items-center
 			.col
 				+e.price 535 ₽
 			.col-auto
-				+e.sub-row.row
-					.col-auto
-						+e.light-btn(type='button') -
-					.col-auto
-						+e.amount 1
-					.col-auto
-						+e.light-btn(type='button') +
-					.col-auto
-						+e.cart-btn(href="#")
-							img(loading="lazy" src='img/svg/cart-white.svg' alt="")
+				+e.light-btn(type='button') -
+			.col-auto
+				+e.amount 1
+			.col-auto
+				+e.light-btn(type='button') +
+			.col-auto
+				+e.cart-btn(href="#")
+					img(loading="lazy" src='img/svg/cart-white.svg' alt="")
 
 mixin catalogItemChar(key,val, color='#1F1F1F')
 	+e.char-row.row

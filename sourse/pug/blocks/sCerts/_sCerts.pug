@@ -1,0 +1,20 @@
+mixin sCerts(data)
+	// start sCerts
+	+b.SECTION.sCerts.section#sCerts&attributes(attributes)
+		+b.section-title
+			h2 Сертификаты
+		+e.row.row
+			.col-sm-6.col-md-4.col-xl-3.col-base-4
+				+sCertsItem()
+			.col-sm-6.col-md-4.col-xl-3.col-base-4
+				+sCertsItem()
+			.col-sm-6.col-md-4.col-xl-3.col-base-4
+				+sCertsItem()
+		+e.yellow-link(href='#') Все сертфикаты...
+	// end sCerts
+
+mixin sCertsItem()
+	+b.cert-item
+		+e.img(href=`img/@2x/sCerts-img.png` data-fancybox="sCerts-imges")
+			img(loading="lazy" src='img/@2x/sCerts-img.png' alt="")
+		+e.descr Сертификат соответствия №В00596 на игрушки металлические Panawealth

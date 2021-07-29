@@ -313,6 +313,7 @@ function eventHandler() {
 	let sCategoriesNext = document.querySelector('.sCategories--js .swiper-button-next');
 	let sCategoriesPrev = document.querySelector('.sCategories--js .swiper-button-prev');
 	let sCategoriesSlider = new Swiper('.sCategories-slider-js', {
+		//loop:true,
 		slidesPerView: 'auto',
 		spaceBetween: 24,
 		slidesPerColumnFill: 'row',
@@ -341,22 +342,32 @@ function eventHandler() {
 		navigation: {
 			nextEl: sCategoriesPrev,
 			prevEl: sCategoriesNext
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true
 		}
 	}); //
 
 	let sProjectSliderBoxes = document.querySelectorAll('.sHit--js');
 
 	for (let sliderBox of sProjectSliderBoxes) {
-		let sProjectSlider = new Swiper(sliderBox.querySelector('.sProject-slider-js'), {
+		let sHitSlider = new Swiper(sliderBox.querySelector('.sHit-slider-js'), {
 			spaceBetween: 24,
 			slidesPerView: 'auto',
+			loop: true,
 			navigation: {
 				nextEl: sliderBox.querySelector('.swiper-button-next'),
 				prevEl: sliderBox.querySelector('.swiper-button-prev')
 			}
 		});
-	} //end luckyoneJs
+	} //
 
+
+	$('.set-curr-year-js').each(function () {
+		this.innerHTML = new Date().getFullYear();
+	}); //end luckyoneJs
 }
 
 ;

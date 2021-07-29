@@ -5,6 +5,8 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sHit/_sHit.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCerts/_sCerts.pug
 
 block variables
 	- let  mainPage= null 
@@ -20,7 +22,18 @@ block pagecontent
 	+headerBlock()
 	+sCategories()
 	+sHit({
+		addClasses: 'pt-0',
 		title: 'Хиты продаж',
 		new: true,
+		footer: true,
 	})
+	+sHit({
+		title: 'Вы смотрели',
+	})
+	.container
+		.row
+			.col-base-6
+				+sAbout()
+			.col-base-6
+				+sCerts()
 	+footer()

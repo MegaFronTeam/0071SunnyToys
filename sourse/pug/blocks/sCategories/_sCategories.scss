@@ -1,7 +1,11 @@
 // start .sCategories
 .sCategories {
 	--sPT: #{rem(20)};
-	--sPB: #{rem(30)};
+
+	--sPB: #{rem(30px)};
+	@include media-breakpoint-up(base){
+		--sPB: #{rem(2px)};
+	}
 	--sTPB: #{rem(0)};
 
 
@@ -36,6 +40,20 @@
 		.swiper-button-hand{
 			.icon{
 				font-size: rem(24);
+			}
+		}
+
+		//
+		.swiper-pagination{
+			padding-top: rem(15);
+			@include media-breakpoint-up(lg){
+				padding-top: rem(30);
+			}
+			position: static;
+			justify-content: center;
+
+			&-bullet {
+				background-color: $gray-110!important;
 			}
 		}
 	}

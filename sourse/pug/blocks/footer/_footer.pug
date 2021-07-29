@@ -1,9 +1,81 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.blue-box
+				+e.row.row
+					+e.first-col.col-base-2
+						+e.logo(href='#')
+							img(loading="lazy" src=`img/svg/logo-yellow.svg` alt="")
+						+e.all-rights
+							| ©
+							|
+							span.set-curr-year-js lalala
+							|
+							| все права защищены
+						+e.attention Обращаем Ваше внимание, что данный сайт носит информационный характер и не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Для получения детальной информации о стоимости и наличию продукции, обращайтесь к менеджерам. Незаконное копирование запрещено.
+						+e.policy(href='#') Политика конфиденциальности
+					.col-lg-9.col-xl-7.col-base-4.d-none.d-sm-block
+						+e.title--catalog Каталог
+						+e.catalog
+							a(href='#') Обучающие игрушки
+							a(href='#') Игрушки на батарейках
+							a(href='#') Игрушки пластмассовые
+							a(href='#') Игрушки на р/у, треки
+							a(href='#') Детские конструкторы
+							a(href='#') Оружие и солдатики
+							a(href='#') Наборы
+							a(href='#') Коляски для кукол
+							a(href='#') Набор доктора
+							//-
+							a(href='#') Куклы
+							a(href='#') Подвеска на кроватку
+							a(href='#') Детские Кухни
+							a(href='#') Игрушки на р/у, треки
+							a(href='#') Детские конструкторы
+							a(href='#') Оружие и солдатики
+							a(href='#') Наборы
+							a(href='#') Коляски для кукол
+							a(href='#') Набор доктора
+							//
+							a(href='#') Обучающие игрушки
+							a(href='#') Игрушки на батарейках
+							a(href='#') Игрушки пласт
+							a(href='#') Игрушки
+							a(href='#') Детские конструкторы
+							a(href='#') Оружие и солдатики
+							a(href='#') Наборы
+							a(href='#') Коляски
+							a(href='#') Все категори
+					+e.clients-col.col-sm-4.col-lg-3.col-xl-2.col-base-2
+						+e.title--clients Клиентам
+						+e.UL.clients-menu
+							li: a(href='#') Доставка и оплата
+							li: a(href='#') Возврат
+							li: a(href='#') Сертификаты
+							li: a(href='#') Контакты
+							li: a(href='#') О компании
+							li: a(href='#') Прайс-лист
+					+e.last-col.col-sm-8.col-lg-12.col-xl-3.col-base-3
+						+e.lc-content
+							+e.title--contacts Контакты
+							+e.lc-row.row
+								.col-lg-4.col-xl-12
+									+e.c-txt Оптовый склад детских игрушек Саннитойс
+								.col-lg-4.col-xl-12
+									+e.office-tel Телефоны офиса:
+									+e.tells
+										+e.tell(href='tell:+79684770095') +7 968-477-00-95
+										+e.tell(href='tel:+79684770048') +7 968-477-00-48
+								.col-lg-4.col-xl-12
+									+e.data
+										+footerDataItem('Skype:')
+											+e.d-yellow sunnytoys2
+										+footerDataItem('Email:')
+											+e.d-yellow(href="mailto:sunnytoys@mail.ru") sunnytoys@mail.ru
+							+e.rules(href='#') Правила использования сайта
+
+mixin footerDataItem(key)
+	+e.data-row.row.align-items-center
+		+e.d-key.col-auto=key
+		+e.d-val.col-auto
+			block
