@@ -1,0 +1,18 @@
+mixin sCertificats(data)
+	// start sCertificats
+	+b.SECTION.sCertificats.section#sCertificats&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сертификаты
+			+e.top-row.row
+				.col-xl-6.col-base-4
+					+e.txt--left
+						p Сертификат соответствия техническим регламентам Союза - документ, которым орган по сертификации удостоверяет соответствие выпускаемой в обращение продукции требованиям технического регламента Союза (технических регламентов Союза).
+				.col-xl-6.col-base-4
+					+e.txt--right
+						p Сертификат соответствия - документ, удостоверяющий соответствие объекта требованиям технических регламентов, положениям стандартов, сводов правил или условиям договоров.
+			+e.certs-row.row
+				-for(var i = 0; i < 5; i++)
+					+e.c-col.col-sm-6.col-md-4.col-base-2
+						+sCertsItem()
+	// end sCertificats

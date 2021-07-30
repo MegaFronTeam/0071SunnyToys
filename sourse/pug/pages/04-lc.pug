@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCerts/_sCerts.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sAboutPage/_sAboutPage.pug
+include ../blocks/sCertificats/_sCertificats.pug
+include ../blocks/sPersonalCab/_sPersonalCab.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '04-1912.png'
+
+block title
+	- let  title= 'about'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Каталог товаров', 'Машинки металические')
+			+e.row.row
+				.col-auto
+					+e.back-arrow(href="#")
+						img(loading="lazy" src='img/svg/short-arrow-left.svg' alt='')
+				.col
+					h1 Личный кабинет
+	+sPersonalCab()
+	+footer()

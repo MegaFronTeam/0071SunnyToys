@@ -628,7 +628,14 @@ a{
 	}
 	&__back-arrow{
 		width: rem(16);
-		height: rem(40);
+
+		height: rem(24);
+		@include media-breakpoint-up(sm){
+			height: rem(30);
+		}
+		@include media-breakpoint-up(md){
+			height: rem(40);
+		}
 		@include media-breakpoint-up(base){
 			padding-top: 4px;
 		}

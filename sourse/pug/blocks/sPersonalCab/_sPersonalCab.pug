@@ -1,0 +1,72 @@
+mixin sPersonalCab(data)
+	// start sPersonalCab
+	+b.sPersonalCab.section#sPersonalCab&attributes(attributes)
+		.container
+			+e.row.row
+				.col-base-4
+					+e.blue-box--data
+						+e.digits ИНН 55669998
+						+e.name ИП Горчаков И.А.
+						+e.data-box
+							+sPersonalCabDataItem('E-mail:', 'info@gorchakov.ru')
+							+sPersonalCabDataItem('Телефон:', '+7 985 999 88 59')
+							+sPersonalCabDataItem('Адрес магазина:', 'Москва, ул. Винова, д 5')
+						+e.bb-foot.row.align-items-center
+							.col-auto
+								+e.edit-btn(href='#') Редактировать профиль
+							.col
+								+e.quit(href='#') Выйти
+				.col-base-6.ms-base-auto
+					+e.sub-title История заказов
+					+e.orders
+						+sPersonalCabOrder({
+							statusColor: '#8CE7ED',
+							statusTxt: 'В Доставке',
+							repeat: true,
+						})
+						+sPersonalCabOrder({
+							statusColor: '#FFBD12',
+							statusTxt: 'Ожидает оплаты',
+							pay: true,
+							dellBtn: true,
+						})
+	// end sPersonalCab
+
+mixin sPersonalCabOrder(data)
+	+e.blue-box--order
+		+e.top-row.row.align-items-base-end.align-items-center
+			+e.number.col-sm-auto №1123-55
+			+e.date.col-sm от 12.12.2020
+			.col-auto
+				+e.status(style=`color: ${data.statusColor}`)=data.statusTxt
+		+e.content
+			| Содержание заказа:
+			|
+			b Машинка металлическая х 2, Набор Гарри Поттер х 2,  Машинка металлическая х 2, Набор Гарри Поттер х 2,  Машинка металлическая х 2, Набор Гарри Поттер х 2,
+		+e.address
+			| Адрес доставки:
+			|
+			b Москва, ул. Винова, д 5
+		+e.foot-row.row.align-items-end
+			.col-lg
+				+e.btns-row.row
+					.col-auto
+						if data.repeat
+							+e.btn--blue(href="#") Повторить заказ
+						if data.pay
+							+e.btn--yellow(href="#") Повторить заказ
+					.col-auto
+						+e.btn--outline(href='#') Подробнее о заказе
+					if data.dellBtn
+						.col-auto
+							+e.btn--outline(href='#') Удалить
+			.col-lg-auto.text-lg-end.order-first.order-lg-0
+				+e.positions 12 позиций
+				+e.price 12 535 ₽
+
+
+
+mixin sPersonalCabDataItem(key, val)
+	+e.data-row.row
+		+e.key-col.col-auto=key
+		+e.val-col.col-auto=val

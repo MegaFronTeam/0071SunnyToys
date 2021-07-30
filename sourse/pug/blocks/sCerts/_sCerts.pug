@@ -15,6 +15,7 @@ mixin sCerts(data)
 
 mixin sCertsItem()
 	+b.cert-item
-		+e.img(href=`img/@2x/sCerts-img.png` data-fancybox="sCerts-imges")
-			img(loading="lazy" src='img/@2x/sCerts-img.png' alt="")
+		+e.img-box
+			+e.img(href=`img/@2x/sCerts-img.png` data-fancybox="sCerts-imges")
+				img(loading="lazy" src='img/@2x/sCerts-img.png' alt="")
 		+e.descr Сертификат соответствия №В00596 на игрушки металлические Panawealth

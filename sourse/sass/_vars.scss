@@ -76,7 +76,7 @@ $yellow: #FFBD12;
 $lemon: #FFFB9B;
 $green: #198754 !default;
 $teal: #20c997 !default;
-$cyan: #0dcaf0 !default;
+$cyan: #8CE7ED;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -479,8 +479,8 @@ $line-height-lg: 2 !default;
 
 $h1-font-size: rem(40);
 $h2-font-size: rem(40);
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: rem(30);
+$h4-font-size: rem(30);
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables

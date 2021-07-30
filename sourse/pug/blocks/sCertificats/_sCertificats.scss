@@ -1,0 +1,67 @@
+// start .sCertificats
+.sCertificats {
+
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(45px)};
+	}
+	@include media-breakpoint-up(base){
+		--sPT: #{rem(93px)};
+	}
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(40)};
+
+	.section-title{
+		h2{
+			@include media-breakpoint-up(lg){
+				font-size: rem(30);
+			}
+		}
+	}
+	&__top-row{
+		--bs-gutter-y: #{rem(24)};
+		padding-bottom: rem(48);
+	}
+	&__txt{
+		&--left{
+			@include media-breakpoint-up(base){
+				max-width: rem(527);
+			}
+		}
+		&--right{
+			@include media-breakpoint-up(base){
+				max-width: rem(504);
+			}
+		}
+
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+		}
+		line-height: (31/20);
+		p{
+
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__certs-row{
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(12)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+
+	&__c-col{
+		@media (min-width: 440px) {
+			width: 50%;
+		}
+		@include media-breakpoint-between(xl,base){
+			width: 20%!important;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sCertificats
