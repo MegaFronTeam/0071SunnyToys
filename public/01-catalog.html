@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body data-bg="01-1912.png">
@@ -1009,7 +1010,7 @@
 										<h2>
 											Банер внутри
 											<br class="d-none d-sm-block"/>категорий для прождвижения
-											 <br class="d-none d-sm-block"/>товара категории
+											<br class="d-none d-sm-block"/>товара категории
 										</h2>
 									</div>
 									<div class="col-auto">
@@ -1035,7 +1036,17 @@
 										<div class="sCatalog__sub-row row align-items-center">
 											<div class="sCatalog__gray col-auto">Сортировка:
 											</div>
-											<div class="col-auto"><img loading="lazy" src="img/svg/sort-stab.svg" alt=""/></div>
+											<div class="col-auto">
+												<div class="custom-select">
+													<select class="custom-select-js" name="sort">
+														<option value="Дата поступления ↑">Дата поступления ↑</option>
+														<option value="Дата поступления ↓">Дата поступления ↓</option>
+														<option value="цена ↑">цена ↑</option>
+														<option value="цена ↓">цена ↓</option>
+														<option value="наличие">наличие</option>
+													</select>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="col-md">
@@ -3138,6 +3149,7 @@
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

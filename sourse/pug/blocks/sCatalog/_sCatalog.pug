@@ -14,7 +14,7 @@ mixin sCatalog(data)
 									|
 									br.d-none.d-sm-block
 									| категорий для прождвижения
-									| 
+									|
 									br.d-none.d-sm-block
 									| товара категории
 							.col-auto
@@ -36,7 +36,8 @@ mixin sCatalog(data)
 								+e.sub-row.row.align-items-center
 									+e.gray.col-auto Сортировка:
 									.col-auto
-										img(loading="lazy" src="img/svg/sort-stab.svg" alt="")
+										//-img(loading="lazy" src="img/svg/sort-stab.svg" alt="")
+										+customSlect('sort')
 							.col-md
 								+sCatalogShowFor()
 							.col-md-auto.d-none.d-md-block
@@ -138,3 +139,9 @@ mixin customChb(txt, addClases, amount)
 				sapn.ms-1.text-primary=amount
 		else
 			span.txt!=txt
+
+mixin customSlect(selectName, optionsArr=['Дата поступления ↑', 'Дата поступления ↓','цена ↑','цена ↓', 'наличие'], keyClass='custom-select-js')
+	+b.custom-select
+		select(name=selectName class=keyClass)
+			- for (let item of optionsArr)
+				option(value=item)=item

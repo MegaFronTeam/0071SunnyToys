@@ -118,61 +118,6 @@ const JSCCommon = {
     }, {passive: true});
   },
   // /mobileMenu
-
-  // tabs  .
-  tabscostume(tab) {
-    const tabs = document.querySelectorAll(tab);
-    const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-    tabs.forEach(element => {
-      let tabs = element;
-      const tabsCaption = tabs.querySelector(".tabs__caption");
-      const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-      const tabsWrap = tabs.querySelector(".tabs__wrap");
-      const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-      const random = Math.trunc(Math.random() * 1000);
-      tabsBtn.forEach((el, index) => {
-        const data = `tab-content-${random}-${index}`;
-        el.dataset.tabBtn = data;
-        const content = tabsContent[index];
-        content.dataset.tabContent = data;
-        if (!content.dataset.tabContent == data) return;
-
-        const active = content.classList.contains('active') ? 'active' : '';
-        // console.log(el.innerHTML);
-        content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-      })
-
-
-      tabs.addEventListener('click', function (element) {
-        const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-        if (!btn) return;
-        const data = btn.dataset.tabBtn;
-        const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-        const content = this.querySelectorAll(`[data-tab-content]`);
-        tabsAllBtn.forEach(element => {
-          element.dataset.tabBtn == data
-            ? element.classList.add('active')
-            : element.classList.remove('active')
-        });
-        content.forEach(element => {
-          element.dataset.tabContent == data
-            ? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-            : element.classList.remove('active')
-        });
-      })
-    })
-
-    // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-    // 	$(this)
-    // 		.addClass('active').siblings().removeClass('active')
-    // 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-    // 		.eq($(this).index()).fadeIn().addClass('active');
-
-    // });
-
-  },
-  // /tabs
-
   inputMask() {
     // mask for input
     let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
@@ -222,13 +167,10 @@ const $ = jQuery;
 function eventHandler() {
   JSCCommon.ifie();
   JSCCommon.modalCall();
-  JSCCommon.tabscostume('.tabs--js');
   JSCCommon.mobileMenu();
   JSCCommon.inputMask();
   JSCCommon.heightwindow();
-  // JSCCommon.animateScroll();
 
-  // JSCCommon.CustomInputFile();
   var x = window.location.host;
   let screenName;
   screenName = document.body.dataset.bg;
@@ -260,39 +202,6 @@ function eventHandler() {
   whenResize();
 
 
-  let defaultSl = {
-    spaceBetween: 0,
-    lazy: {
-      loadPrevNext: true,
-    },
-    watchOverflow: true,
-    spaceBetween: 0,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: ' .swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-      // renderBullet: function (index, className) {
-      // 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-      // }
-    },
-  }
-
-  const swiper4 = new Swiper('.sBanners__slider--js', {
-    // slidesPerView: 5,
-    ...defaultSl,
-    slidesPerView: 'auto',
-    freeMode: true,
-    loopFillGroupWithBlank: true,
-    touchRatio: 0.2,
-    slideToClickedSlide: true,
-    freeModeMomentum: true,
-  });
-  // modal window
   //luckyoneJs
   let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
     slidesPerView: 'auto',
@@ -398,6 +307,10 @@ function eventHandler() {
       $(this).toggleClass('active');
     })
   })
+  //
+  $('.custom-select-js').select2({
+    minimumResultsForSearch: Infinity,
+  });
 
 
   //end luckyoneJs
