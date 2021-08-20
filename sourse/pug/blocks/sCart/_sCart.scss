@@ -1,0 +1,373 @@
+// start .sCart
+.sCart {
+	--sPT: #{rem(0)};
+
+	@include media-breakpoint-up(base){
+		--sPB: #{rem(64)};
+		margin-top: -2px;
+	}
+
+	&__row{
+		--bs-gutter-y: #{rem(36)};
+	}
+	&__box{
+		border: 1px solid rgba($black, .1);
+
+		padding: rem(24) rem(16);
+		border-radius: rem(12);
+		@include media-breakpoint-up(lg){
+			padding: rem(19);
+			border-radius: rem(20);
+		}
+		&--outline-gray{
+
+		}
+		&--blue{
+			background: $gray-100;
+			@include media-breakpoint-up(xxl){
+				padding: rem(40);
+			}
+		}
+	}
+	&__cart-items{
+		margin-bottom: rem(20);
+	}
+	&__item{
+		margin-bottom: rem(20);
+		padding-bottom: rem(20);
+		border-bottom: 1px dashed rgba($black, .1);
+	}
+	&__i-row{
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(30)};
+		}
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(70)};
+		}
+		--bs-gutter-y: #{rem(16)};
+	}
+	&__i-sub-row{
+		--bs-gutter-x: #{rem(20)};
+	}
+	&__i-img{
+		display: block;
+		@include mt();
+		width: rem(65);
+		height: rem(70);
+		border-radius: rem(5);
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		font-family: $mono4;
+
+		font-size: rem(18);
+		margin-bottom: rem(4);
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+			margin-bottom: 1px;
+		}
+		@include media-breakpoint-up(base){
+			font-size: rem(23);
+		}
+		line-height: calc(25/20);
+		color: $gray-950;
+	}
+	&__price-gray{
+		font-family: $mono4;
+		color: rgba($black, .5);
+		line-height: calc(23/18);
+
+		font-size: rem(16);
+		@include media-breakpoint-up(lg){
+			font-size: rem(18);
+		}
+	}
+	&__single-price{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: rem(24);
+		line-height: (30/24);
+		color: $gray-950;
+	}
+	&__sp-gray{
+		font-family: $mono4;
+		color: rgba($black, .5);
+
+		font-size: rem(14);
+		line-height: calc(18/14);
+	}
+	&__cross-btn{
+		@extend .btn;
+		padding: 0;
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			z-index: -1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: rem(40);
+			height: rem(40);
+		}
+
+		border: none!important;
+		box-shadow: none!important;
+
+		color: rgba($black, .1);
+		&:hover{
+			color: $primary;
+		}
+		.icon{
+			font-size: rem(18);
+			color: currentColor;
+		}
+	}
+	&__result{
+		font-family: $mono;
+		font-weight: bold;
+		font-size: rem(24);
+		line-height: (30/24);
+		text-align: right;
+		color: $headings-color;
+	}
+	//
+	.form-wrap{
+		&__title{
+			font-family: $mono;
+			color: $gray-810;
+			margin-bottom: 0;
+
+			font-size: rem(24);
+			@include media-breakpoint-up(md){
+				font-size: rem(32);
+			}
+			line-height: calc(41/32);
+		}
+		&__inp-row{
+			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-y: #{rem(20)};
+		}
+		&__sub-title{
+			font-family: $mono;
+			font-weight: bold;
+			font-size: rem(16);
+			color: $body-color;
+		}
+		&__input-wrap{
+			textarea{
+				height: 100px;
+			}
+		}
+		&__input{
+			font-size: rem(16);
+			line-height: calc(19/16);
+		}
+		//
+		&__chars-col{
+			@include media-breakpoint-up(base){
+				padding-right: rem(30);
+			}
+		}
+		&__chars{
+		}
+		&__char{
+			margin-bottom: rem(10);
+			&:last-child{
+				padding-top: rem(4);
+				margin-bottom: 0;
+				--val-color: #{$primary};
+				--bb-content:none;
+			}
+		}
+		&__c-row{
+			--bs-gutter-x: #{rem(10)};
+			align-items: baseline;
+		}
+		.bb-col{
+
+			&:after{
+				content: var(--bb-content, '');
+				display: block;
+				border-bottom: 1px dashed rgba($black, .5);
+			}
+		}
+		&__c-key{
+			font-size: rem(20);
+			line-height: 1.2;
+			color: $body-color;
+		}
+		&__c-val{
+			font-family: $mono;
+			font-weight: bold;
+			font-size: rem(24);
+			line-height: calc(30/24);
+			color: var(--val-color, #{$headings-color});
+		}
+		//
+		&__white-box{
+			background: $white;
+			border: 1px solid $gray-420;
+			border-radius: rem(5);
+
+			padding: rem(20);
+			@include media-breakpoint-up(base){
+				padding: rem(14) rem(10) rem(20) rem(20);
+			}
+
+			margin-bottom: var(--bs-gutter-y);
+		}
+		&__w-row{
+			--bs-gutter-y: #{rem(16)};
+
+			--bs-gutter-x: #{rem(22)};
+			@include media-breakpoint-up(base){
+				--bs-gutter-x: #{rem(22)};
+			}
+		}
+		&__w-title{
+			font-size: rem(20);
+			line-height: 1.2;
+			color: $body-color;
+			margin-bottom: rem(3);
+		}
+		&__w-imgs{
+			display: flex;
+			flex-direction: column;
+		}
+		&__w-img{
+			display: block;
+			max-width: rem(60);
+
+			img{
+				width: auto;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+		&__w-choise{
+			display: inline-block;
+			margin-bottom: rem(5);
+			font-family: $mono;
+			font-weight: bold;
+
+			line-height: (20/16);
+			color: $yellow;
+		}
+		&__w-descr{
+			font-size: rem(12);
+			line-height: (14/12);
+
+			color: rgba($black, .5);
+		}
+		&__btn{
+			@extend .btn;
+			padding: rem(12) rem(20);
+
+			font-weight: bold;
+			font-size: rem(20);
+			line-height: 1.2;
+
+			color: $headings-color!important;
+			width: 100%;
+			&--light{
+				@extend .btn-info;
+			}
+		}
+		//
+		&__polite{
+			display: flex;
+			align-items: center;
+		}
+
+		//-
+		.custom-chb{
+			flex-shrink: 0;
+			display: flex!important;
+			width: auto!important;
+		}
+		&__p-txt{
+			font-size: rem(14);
+			line-height: calc(20/14);
+			color: $headings-color;
+
+			a{
+				color: $primary;
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		&__{}
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sCart
+
+//
+.custom-chb2{
+	display: flex!important;
+	width: auto!important;
+	margin-right: rem(10);
+	align-items: center;
+	cursor: pointer;
+
+	input:checked + .square{
+		&:after{
+			opacity: 1;
+		}
+	}
+	.square{
+		@include mt();
+		width: rem(20);
+		height: rem(20);
+		padding: 4px;
+		border-radius: rem(3);
+
+		background: $white;
+		border: 1px solid $gray-420;
+
+		&:after{
+			@include mt();
+			display: block;
+			opacity: 0;
+			content: '';
+			width: 100%;
+			min-height: 100%;
+
+			background-image: url(../img/svg/check-primary.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	.txt{
+		font-size: rem(12);
+		line-height: 1.3;
+	}
+
+	&.bold{
+		input:checked + .square + .txt{
+			color: $primary;
+		}
+
+		.txt{
+			font-family: $mono;
+			font-weight: bold;
+			font-size: rem(14);
+			line-height: (18/14);
+		}
+	}
+}

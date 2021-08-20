@@ -50,25 +50,29 @@ mixin catalogItem()
 		+priceRow()
 
 mixin priceRow(oldPrice, bigBtn)
-	+b.price-row.row.align-items-center
+	+b.price-row.row.align-items-center.gy-3.mt-auto
 		.col
 			if oldPrice
 				+e.old-price 12 535
-			+e.price 535 ₽
+			+e.price 12 535,00  ₽
 		.col-auto
 			+e.light-btn(type='button') -
 		.col-auto.align-self-center
 			+e.amount.text-center 1
 		.col-auto
 			+e.light-btn(type='button') +
-		.col-auto
+		.col-12
 			if bigBtn
-				+e.cart-btn-big(href="#")
+				+e.cart-btn-big--w100(href="#")
 					+e.c-icon
 						img(loading="lazy" src='img/svg/cart-big.svg' alt="")
 					span.d-none.d-sm-inline В корзину
 			else
-				+e.cart-btn(href="#")
+				+e.cart-btn-big--w100(href="#")
+					+e.c-icon
+						img(loading="lazy" src='img/svg/cart-big.svg' alt="")
+					span В корзину
+				//-+e.cart-btn(href="#")
 					img(loading="lazy" src='img/svg/cart-white.svg' alt="")
 
 mixin catalogItemChar(key,val, color='#1F1F1F')

@@ -213,6 +213,7 @@ function eventHandler() {
 	whenResize(); //luckyoneJs
 
 	let headerBlockSlider = new Swiper('.headerBlock-slider-js', {
+		loop: true,
 		slidesPerView: 'auto',
 		spaceBetween: 20,
 		navigation: {

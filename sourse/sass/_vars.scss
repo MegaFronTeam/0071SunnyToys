@@ -46,6 +46,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
+$gray-810: #323A42;
 $gray-900: #212529 !default;
 $gray-950: #1F1F1F;
 $black: #000 !default;
@@ -391,7 +392,7 @@ $border-color: $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: .25rem !default;
+$border-radius: rem(5) !default;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: .3rem !default;
 $border-radius-pill: 50rem !default;
@@ -712,8 +713,8 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(14);
+$input-padding-x: rem(19);
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -727,12 +728,12 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $white !default;
+$input-bg: $white;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: $gray-420 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -746,7 +747,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: rgba($black, .5);
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;

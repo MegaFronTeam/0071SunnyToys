@@ -160,6 +160,7 @@
 		flex-direction: column;
 	}
 	&__baner-bg{
+		display: block;
 		position: absolute;
 		z-index: -1;
 		top: 0;
@@ -183,6 +184,7 @@
 		flex-direction: column;
 	}
 	&__b-title{
+		display: block;
 		font-family: $mono;
 		font-weight: bold;
 		font-size: rem(25);
@@ -191,6 +193,7 @@
 		margin-bottom: rem(16);
 	}
 	&__b-descr{
+		display: block;
 		font-size: rem(14);
 		line-height: (17/14);
 		color: $light;

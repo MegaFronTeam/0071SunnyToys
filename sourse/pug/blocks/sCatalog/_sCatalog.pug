@@ -3,7 +3,7 @@ mixin sCatalog(data)
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
 			+e.row.row
-				+e.filter-col.col-lg-4.col-xl-3.col-base-2
+				+e.filter-col.col-xl-3.col-base-2
 					+sCatalogFilter()
 				.col-lg
 					+e.baner
@@ -44,7 +44,7 @@ mixin sCatalog(data)
 								+pugin()
 					+e.cards-row.row
 						-for(var i = 0; i < 20; i++)
-							+e.card-col.col-sm-6.col-md-4.col-xl-4
+							+e.card-col.col-sm-6.col-lg-4.col-xl-4
 								+catalogItem()
 					+e.foot-row.row
 						+e.f-show-for-col.col
@@ -85,6 +85,13 @@ mixin sCatalogFilter()
 				.col-auto
 					+e.h-discard(href="#") Сбросить
 		+e.body
+			+e.dd-item.f-dd-item-js
+				+e.i-row.row.align-items-center
+					.col
+						+customChb('тут нет дропдауна', 'bold', 5)
+							span.txt тут нет дропдауна
+					//-.col-auto
+						+e.dd-btn.f-dd-btn-js(class=activeClasses)
 			+sCatalogFilterItem('Машинки металлические', undefined, 'active')(checked)
 			+sCatalogFilterItem('Обучающие игрушки', '5')
 			+sCatalogFilterItem('Игрушки на батарейках', '4')

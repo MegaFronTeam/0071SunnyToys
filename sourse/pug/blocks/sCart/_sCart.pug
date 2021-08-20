@@ -1,0 +1,100 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+e.row.row
+				.col-xl-7
+					+e.box--outline-gray
+						+e.cart-items
+							+sCartItem()
+							+sCartItem()
+							+sCartItem()
+							+sCartItem()
+						+e.result Итого: 540 000 ₽
+				.col-xl-5
+					+e.box--blue
+						+form-wrap()
+							+e.inp-row.row
+								.col-12
+									+e.H2.title Оформление заказа
+								.col-12
+									+e.sub-title Получатель
+								.col-base-6
+									+input('Ваше имя', 'text')
+								.col-base-6
+									+input('Ваш телефон', 'text')
+								.col-12
+									+input('Ваш e-mail', 'email')
+								.col-12
+									+input('Ваш комментарий к заказу', 'textarea')
+								+e.chars-col.col-base-6
+									+e.chars
+										+sCartCharItem('Товар', '659 ₽')
+										+sCartCharItem('Доставка', '69 ₽')
+										+sCartCharItem('Итого: ', '659 ₽')
+								.col-base-6
+									+e.white-box
+										+e.w-row.row
+											.col-sm-auto
+												+e.w-title Оплата
+												+e.w-imgs
+													+sCartWImg(1)
+													+sCartWImg(2)
+											.col-sm
+												+e.w-choise(href="#") Выбрать способ оплаты
+												+e.w-descr
+													| Принимаем банковские карты
+													br
+													| Visa, MasterCard
+									+e.btn--light(type="submit") Оформить заказ
+								.col-12
+									+e.polite
+										+customChbSingle()(checked)
+										+e.p-txt
+											| Я согласен на обработку моих персональных данных в соответствии с
+											|
+											a(href="#") Условиями
+	// end sCart
+mixin sCartWImg(imgNum)
+	+e.w-img
+		img(loading="lazy" src=`img/@2x/w-img-${imgNum}.png` alt="")
+
+mixin customChbSingle()
+	+b.LABEL.custom-chb2
+		input(type="checkbox" class='invisible' name='some-name')&attributes(attributes)
+		span.square
+
+mixin sCartCharItem(key, val)
+	+e.char
+		+e.c-row.row
+			+e.c-key.col-auto=key
+			.col(class='bb-col')
+			+e.c-val.col-auto=val
+
+mixin sCartItem(data)
+	+e.item
+		+e.i-row.row.align-items-center
+			.col-md
+				+e.i-sub-row.row.align-items-center
+					.col-auto
+						+e.i-img(href="#")
+							img(loading="lazy" src="img/@2x/cart-img.png" alt="")
+					.col
+						+e.name Водное оружие с помпой и ремнем на плечо
+						+e.price-gray Цена: 540 000 ₽
+			//-splitter
+			//-.col-12.m-0.d-md-none
+			.col-auto
+				+b.price-row.row.align-items-center
+					.col-auto
+						+e.light-btn(type='button') -
+					.col-auto.align-self-center
+						+e.amount.text-center 1
+					.col-auto
+						+e.light-btn(type='button') +
+			.col-auto
+				+e.single-price 659 ₽
+				+e.sp-gray 1 шт. 659 ₽
+			.col-auto.ms-auto.ms-md-0
+				+e.cross-btn(type="button")
+					+icon('cross2')

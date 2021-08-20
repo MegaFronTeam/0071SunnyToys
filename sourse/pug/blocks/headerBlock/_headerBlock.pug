@@ -8,7 +8,7 @@ mixin headerBlock()
 						.swiper-container.headerBlock-slider-js
 							.swiper-wrapper
 								+headerBlockSlide()
-								-for(var i = 1; i < 7;i++)
+								//--for(var i = 1; i < 7;i++)
 									+headerBlockSlide(i)
 							.d-none.d-md-block
 								+arrow()
@@ -34,11 +34,11 @@ mixin headerBlockSlide(mod='')
 
 mixin headerBlockBaner(imgNum, title, descr, titleCol='white', descrCol='descrCol')
 	.col-md-6.col-xl-12
-		+e.baner
+		+e.baner(href="#")
 			+e.baner-bg
 				img(loading="lazy" src=`img/@2x/slide-img-${imgNum}.jpg` alt="")
 			+e.b-content
 				+e.b-title(style=`color: ${titleCol}`)=title
 				+e.b-descr(style=`color: ${descrCol}`)=descr
-				+e.b-btn(href="#")
+				+e.b-btn
 					+icon('arrow-right')
