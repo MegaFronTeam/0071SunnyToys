@@ -180,11 +180,12 @@
 
 //
 .price-row{
-	--bs-gutter-x: #{rem(8)};
+	--bs-gutter-x: #{rem(6)};
 	&__price{
 		font-family: $mono;
 		font-weight: bold;
-		font-size: rem(18);
+		font-size: rem(17);
+		letter-spacing: -0.1px;
 		line-height: (23/18);
 		color: $black;
 	}
@@ -201,9 +202,9 @@
 		@extend .btn;
 		@extend .btn-light;
 
-		width: rem(32);
-		height: rem(32);
-		line-height: rem(32);
+		width: rem(30);
+		height: rem(30);
+		line-height: rem(30);
 		border-radius: rem(8);
 		padding: 0;
 		text-align: center;
@@ -217,6 +218,12 @@
 		font-size: rem(18);
 		line-height: (23/18);
 		color: $black;
+
+		display: inline-block;
+		min-width: 0;
+		//width: rem(40);
+		padding: 0;
+		border: 0;
 	}
 	&__cart-btn{
 		@extend .btn;
