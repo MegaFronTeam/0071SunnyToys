@@ -11,6 +11,7 @@ mixin mob-mnu()
 			+topNavsocRow('d-lg-none mb-4')
 			+b.tn-tell.d-lg-none.mb-4(href="tel:88006595599") 8 800 659 55 99
 			+tnCity('d-md-none mb-4')
+		+catalog().d-lg-none
 
 mixin top-nav() 
 	// start top-nav
@@ -47,6 +48,7 @@ mixin top-nav()
 							span
 				//-.col.d-none.d-lg-block
 					+mnu()
+		+catalog().d-none.d-lg-block
 	// end top-nav
 
 mixin topNavSocItem(iconName)
@@ -74,3 +76,46 @@ mixin tnCatalogBtn(addClasses='')
 		+e.icon
 			img(loading="lazy" src="img/svg/catalog-burger.svg" alt="")
 		span Каталог
+
+mixin catalog()
+	+b.catalog-dropdown&attributes(attributes)
+		+e.back: +icon('arrow-left')
+		.container
+			+e.wrap
+				+e.row.row
+					.col-lg-9
+						+e.title.h3 Сигары
+						+e.UL.columns
+							li: a(href="#") Cohiba
+							li: a(href="#") Hoyo De Monterrey
+							li: a(href="#") Partagas
+							li: a(href="#") Romeo y Julietta
+							li: a(href="#") Quintero
+							li: a(href="#") H.Upmann
+							li: a(href="#") Montecristo
+							li: a(href="#") Cohiba
+							li: a(href="#") Hoyo De Monterrey
+							li: a(href="#") Partagas
+							li: a(href="#") Romeo y Julietta
+							li: a(href="#") Quintero
+							li: a(href="#") H.Upmann
+							li: a(href="#") Montecristo
+							li: a(href="#") Cohiba
+							li: a(href="#") Hoyo De Monterrey
+							li: a(href="#") Partagas
+							li: a(href="#") Romeo y Julietta
+							li: a(href="#") Quintero
+							li: a.catalog-dropdown__show-full(href="#") Смотреть все
+					.col-lg-3
+						+e.title.h3 Сигариллы
+						ul
+							li: a(href="#") Cohiba
+							li: a(href="#") Hoyo De Monterrey
+							li: a(href="#") Partagas
+							li: a(href="#") Romeo y Julietta
+							li: a(href="#") Quintero
+							li: a(href="#") H.Upmann
+							li: a(href="#") Montecristo
+				+e.title-wrap
+					+e.title.h3(href='#') Аксессуары
+					+e.title.h3(href='#') Наборы

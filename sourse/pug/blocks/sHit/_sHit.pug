@@ -17,7 +17,7 @@ mixin sHit(data)
 					.swiper-wrapper
 						-for(var i = 0; i < 10; i++)
 							.swiper-slide
-								+catalogItem()
+								+catalogItem(`${data.num}-${i}`)
 			if data.footer
 				+e.footer-row.row
 					.col-auto
@@ -25,9 +25,9 @@ mixin sHit(data)
 
 	// end sHit
 
-mixin catalogItem()
+mixin catalogItem(i)
 	+b.catalog-item
-		+e.img(href="#")
+		+e.img(data-fancybox=`gallery-${i}` data-src='img/@2x/catalog-item.png')
 			img(loading="lazy" src='img/@2x/catalog-item.png' alt="")
 		+e.top-row.row.align-items-center
 			.col
@@ -38,15 +38,16 @@ mixin catalogItem()
 						| Арт:
 						|
 					b Г11340
-		+e.title(href='#')
-			| Конструктор
-			br
-			| Гарри Поттер Экспекто Патронум 139дет
-		+e.chars
-			+catalogItemChar('Коробка', '84 шт.')
-			+catalogItemChar('Блок', '84 шт.')
-			+catalogItemChar('В наличии', 'Более коробки')
-			+catalogItemChar('Тема', 'Гарри Поттер', '#FFBD12')
+		+e.content-wrap
+			+e.title(href='#')
+				| Конструктор
+				br
+				| Гарри Поттер Экспекто Патронум 139дет
+			+e.chars
+				+catalogItemChar('Коробка', '84 шт.')
+				+catalogItemChar('Блок', '84 шт.')
+				+catalogItemChar('В наличии', 'Более коробки')
+				+catalogItemChar('Тема', 'Гарри Поттер', '#FFBD12')
 		+priceRow()
 
 mixin priceRow(oldPrice, bigBtn)

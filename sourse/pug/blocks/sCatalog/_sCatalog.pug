@@ -45,7 +45,7 @@ mixin sCatalog(data)
 					+e.cards-row.row
 						-for(var i = 0; i < 20; i++)
 							+e.card-col.col-sm-6.col-lg-4.col-xl-4
-								+catalogItem()
+								+catalogItem(i)
 					+e.foot-row.row
 						+e.f-show-for-col.col
 							+sCatalogShowFor()

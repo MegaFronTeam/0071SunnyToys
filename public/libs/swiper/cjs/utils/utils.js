@@ -111,7 +111,7 @@ function isObject(o) {
 
 function isNode(node) {
   // eslint-disable-next-line
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && typeof window.HTMLElement !== 'undefined') {
     return node instanceof HTMLElement;
   }
 
@@ -179,7 +179,7 @@ function classesToSelector(classes) {
     classes = '';
   }
 
-  return "." + classes.trim().replace(/([\.:\/])/g, '\\$1') // eslint-disable-line
+  return "." + classes.trim().replace(/([\.:!\/])/g, '\\$1') // eslint-disable-line
   .replace(/ /g, '.');
 }
 

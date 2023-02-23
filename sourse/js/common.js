@@ -110,7 +110,8 @@ const JSCCommon = {
     document.addEventListener('mouseup', (event) => {
       let container = event.target.closest(".menu-mobile--js.active"); // (1)
       let link = event.target.closest(".menu-mobile .menu a"); // (1)
-      if (!container || link) this.closeMenu();
+      let catalogTargetContainer = event.target.closest('.catalog-dropdown.active');
+      if ((!container || link) && !catalogTargetContainer) this.closeMenu();
     }, {passive: true});
 
     window.addEventListener('resize', () => {
@@ -315,6 +316,38 @@ function eventHandler() {
 
 
   //end luckyoneJs
+
+  let dublicatedSlidesImgs = document.querySelectorAll('.swiper-slide-duplicate .catalog-item__img');
+  if(dublicatedSlidesImgs) {
+    dublicatedSlidesImgs.forEach(dublicatedSlidesImg => {
+      dublicatedSlidesImg.dataset.fancybox = '';
+    })
+  }
+
+  let catalogBtns = document.querySelectorAll('.catalog-btn');
+	let catalogDropdowns = document.querySelectorAll('.catalog-dropdown');
+	if (catalogBtns) {
+    for (const catalogBtn of catalogBtns) {
+      catalogBtn.addEventListener('click', function(event) {
+        // event.preventDefault();
+        catalogBtn.classList.toggle('active');
+        if (catalogDropdowns) {
+          catalogDropdowns.forEach(catalogDropdown => catalogDropdown.classList.toggle('active'));
+          // catalogDropdown.classList.toggle('active');
+          document.addEventListener('mouseup', (event) => {
+            let catalogContainer = event.target.closest('.catalog-dropdown.active .catalog-dropdown__wrap');
+            let catalogTargetBtn = event.target.closest('.catalog-btn.active');
+            let catalogTargetBackBtn = event.target.closest('.catalog-dropdown__back');
+            if(!catalogContainer && !catalogTargetBtn || catalogTargetBackBtn) {
+              catalogBtn.classList.remove('active');
+              // catalogDropdown.classList.remove('active');
+              catalogDropdowns.forEach(catalogDropdown => catalogDropdown.classList.remove('active'));
+            }
+          });
+        };
+      });
+    }
+	};
 
 };
 if (document.readyState !== 'loading') {
