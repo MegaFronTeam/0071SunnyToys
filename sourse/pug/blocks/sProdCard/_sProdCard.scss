@@ -136,6 +136,22 @@
 		}
 	}
 	//
-	&__{}
-	&__{}
+	.product-images-slider {
+		position: relative;
+		.swiper-button-hand {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 50%;
+			@media (min-width: 1880px) {
+				background-color: #fffb9b;
+			}
+			&-prev {
+				right: 0;
+			}
+			&-next {
+				left: 0;
+			}
+		}
+	}
 } // end.sProdCard
