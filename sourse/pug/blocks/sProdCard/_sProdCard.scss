@@ -17,6 +17,9 @@
 		@include media-breakpoint-up(base){
 			--bs-gutter-x: #{rem(24)};
 		}
+		.row {
+			--bs-gutter-x: 0;
+		}
 	}
 	&__img{
 		@include media-breakpoint-up(base){
