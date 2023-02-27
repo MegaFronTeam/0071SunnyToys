@@ -90,7 +90,11 @@ a {
 	}
 }
 
-
+.has-iframe {
+	.fancybox__content {
+		padding: 0;
+	}
+}
 // 
 @include media-breakpoint-up(xl) {}
 
