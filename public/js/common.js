@@ -337,7 +337,29 @@ function eventHandler() {
 		}
 	}
 	;
+	let pcSliders = document.querySelectorAll('.sProdCard');
+	for (let pcSlider of pcSliders) {
+		const prodCardThumb = new Swiper(pcSlider.querySelector('.sProdCard__slider--thumbs-js'), {
+			slidesPerView: 4,
+			slideToClickedSlide: true,
+			spaceBetween: 16,
+			navigation: {
+				nextEl: pcSlider.querySelector('.swiper-button-hand-next'),
+				prevEl: pcSlider.querySelector('.swiper-button-hand-prev')
+			}
+		});
+		let prodCardSlider = new Swiper(pcSlider.querySelector('.sProdCard__slider--js'), {
+			spaceBetween: 30,
+			slideToClickedSlide: true,
+			thumbs: {
+				swiper: prodCardThumb
+			}
+		});
+		prodCardSlider.controller.control = prodCardThumb;
+		// prodCardThumb.controller.control = prodCardSlider;
+	}
 }
+
 ;
 if (document.readyState !== 'loading') {
 	eventHandler();

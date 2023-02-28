@@ -158,4 +158,19 @@
 			}
 		}
 	}
+	.swiper-container{
+		position: relative;
+	}
+	.swiper-button-hand{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 4;
+		&-prev{
+			left: 0;
+		}
+		&-next{
+			right: 0;
+		}
+	}
 } // end.sProdCard

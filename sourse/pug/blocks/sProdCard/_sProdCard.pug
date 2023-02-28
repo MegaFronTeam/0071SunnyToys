@@ -4,8 +4,28 @@ mixin sProdCard(data)
 		.container
 			+e.row.row
 				.col-lg-6
-					+e.img(data-fancybox="video-gallery" data-src='https://vk.com/video_ext.php?oid=-63758929&id=456241068&hash=7eaebe1855265c5c&hd=2&autoplay=1' data-type="iframe" data-thumb="https://lipsum.app/id/32/200x150" data-width="1280" data-height="720")
-						img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.img(data-fancybox="video-gallery" data-src="img/@2x/prod-img.png")
+									img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+							- for (var x = 0; x < 5; x++)
+
+								+e.slide.swiper-slide
+									+e.img(data-fancybox="video-gallery" data-src='https://vk.com/video_ext.php?oid=-63758929&id=456241068&hash=7eaebe1855265c5c&hd=2&autoplay=1' data-type="iframe" data-thumb="img/@2x/prod-img.png" data-width="1280" data-height="720")
+										img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+					+e.slider--thumbs.--thumbs-js.swiper-container
+						+arrow()
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.img()
+									img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+							- for (var x = 0; x < 5; x++)
+
+								+e.slide.swiper-slide
+									+e.img()
+										img(loading="lazy" src='img/@2x/prod-img.png' alt="")
+										
 				.col-lg-6.col-base-5
 					+e.chars
 						+sProdCardCharItem('Артикул')
